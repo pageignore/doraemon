@@ -1,0 +1,134 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>多啦A梦</title>
+<style type="text/css">
+@keyframes move{
+	0%,100%{transform: rotate(-5deg);}
+	50%{transform: rotate(0deg);}
+}
+@-webkit-keyframes move{
+	0%,100%{transform: rotate(-5deg);}
+	50%{transform: rotate(0deg);}
+}
+
+@keyframes mainmove{
+	0%,100%{transform: rotate(5deg) translateX(-40px);}
+	50%{transform: rotate(-5deg) translateX(40px);}
+}
+@-webkit-keyframes mainmove{
+	0%,100%{transform: rotate(5deg) translateX(-40px);}
+	50%{transform: rotate(-5deg) translateX(40px);}
+}
+
+@keyframes tailmove{
+	0%,100%{transform:translateX(8px) translateY(-5px);}
+	50%{transform:translateX(-8px) translateY(5px);}
+}
+@-webkit-keyframes tailmove{
+	0%,100%{transform:translateX(8px) translateY(-5px);}
+	50%{transform:translateX(-8px) translateY(5px);}
+}
+
+@keyframes assmove{
+	0%,100%{transform:rotate(8deg) translateY(3px)}
+	50%{transform:rotate(-16deg) translateY(5px)}
+}
+@-webkit-keyframes assmove{
+	0%,100%{transform:rotate(8deg) translateY(3px)}
+	50%{transform:rotate(-16deg) translateY(5px)}
+}
+
+*{padding: 0 ; margin: 0;}
+.top{width: 250px; height: 250px; border:2px solid #444;position: absolute;left: 28%;top: -128px;transform: rotate(-45deg);border-left: 2px solid transparent; border-bottom: 2px solid transparent;}
+.top:after{content: " "; width: 20px; height: 20px; background: #444; border-radius: 50%; position: absolute;right: -10px; top: -10px;}
+.main{width: 655px; height: 417px; background: #feec7b; border: 1px solid #c4c4c4; margin: 200px auto 0; position: relative;animation:mainmove 5s infinite;}
+.head_wrap{width: 343px; height: 303px; background: #00a0e9; /*transform: rotate(-5deg);*/
+animation:move 1s infinite linear;
+-webkit-animation:move 1s infinite linear;
+border:2px solid #000; border-radius: 50%; position: absolute; left: 235px; top: 14px; z-index: 10;}
+.face{ width: 309px; height: 229px; background: #fff; border: 2px solid #000; border-radius: 40% 40% 46% 49%/46% 46% 48% 48%;transform: rotate(-16deg); position: absolute; left: 30px ;top:75px; overflow: hidden;}
+.face:after{content: " "; width: 280px ; height: 120px; border:2px solid #000; border-top:2px solid transparent; transform: rotate(-4deg); border-radius:130px 130px 220px 280px/60px 60px 140px 160px; position: absolute; left: 16px; top: 22px;}
+.shelter_left{width: 20px; height: 30px; background: #fff; position: absolute; left: 12px; top:40px; z-index: 1;}
+.shelter_left:after{content: " "; width: 20px ; height: 30px; background: #fff; position: absolute; left: 280px; top: -1px; z-index: 1;}
+.eye_left{width: 60px; height: 84px; background: #fff; border:2px solid #000; border-radius: 50% 50% 50% 50%/46% 46% 46% 46%; transform: rotate(-13deg); position: absolute; left: 94px; top:30px; }
+.eye_right{ width: 62px; height: 86px; background: #fff; border:2px solid #000; border-radius: 50% 50% 50% 50%/46% 46% 46% 46%; transform: rotate(-13deg); position: absolute; left: 158px; top:10px; }
+.eye_left .eyeball{ width: 14px; height: 26px; background: #000; border-radius: 50%; position: absolute;  right: 4px; top:34px; }
+.eye_left .eyeball:after{ content: " "; width: 6px; height: 9px; background: #fff; border-radius: 50%; position: absolute; right: 2px; top:8px;}
+.eye_right .eyeball{ width: 14px; height: 26px; background: #000; border-radius: 50%; position: absolute;  left: 10px; top:34px; transform: rotate(-5deg);}
+.eye_right .eyeball:after{content: " "; width: 6px; height: 9px; background: #fff; border-radius: 50%; position: absolute; right: 3px; top:8px;}
+.nose{width: 36px ;height: 36px; border:2px solid #000; background: #e0002a; border-radius: 50%; position: absolute;; left: 157px; top:82px;}
+.nose:after{content: " "; width: 11px; height: 11px; background: #fff;  border-radius: 50%; position: absolute; left: 8px ;top:10px;}
+.row_line{width: 80px; height: 106px; border:2px solid #000; border-top:2px solid transparent; border-left: 2px solid transparent; border-bottom: 2px solid transparent; border-radius: 0 10px 10px 0/0 40px 40px 0 ; position: absolute; left: 96px; top:39px;}
+.beard{width: 110px; height: 2px; background: #000; position: absolute; border-radius: 50%;}
+.beard_01{left: 34px; top:52px; transform: rotate(12deg); width: 107px;}
+.beard_02{left: 24px; top:78px; transform: rotate(5deg); width: 108px;}
+.beard_03{left: 10px; top:106px; transform: rotate(-6deg); width: 116px;}
+.beard_04{left: 236px; top:118px; transform: rotate(-21deg); width: 114px}
+.beard_05{left: 242px; top:144px; transform: rotate(-14deg);width: 117px;}
+.beard_06{left: 250px; top:174px; transform: rotate(-4deg);width: 120px;}
+.ass{ width: 160px; height: 120px; border:2px solid #000; border-bottom: 2px solid transparent; border-left: 2px solid transparent; border-radius: 70% 100% 50% 50%/90% 100% 50% 50%; transform: rotate(-50deg); background: #00a0e9; position: absolute; top: 174px; left: 124px;z-index: 2;}
+.ass:after{content: " "; width: 20px; height: 30px; border:2px solid #000; border-top:2px solid transparent; border-left: 2px solid transparent; border-bottom: 2px solid transparent; border-radius: 0 15px 15px 0/0 15px 15px 0; transform: rotate(20deg); position: absolute;; top:-30px; left: 70px;animation: assmove 2s infinite;}
+.tail{width: 40px; height: 40px; background: #e0002a; border:2px solid #000; border-radius: 50%; position: absolute;; left: 118px; top:142px; z-index: 0; animation: tailmove 2s infinite;}
+.leg{ width: 182px; height: 100px; border:2px solid #000; background: #00a0e9; transform: rotate(4deg); border-radius: 20% 50% 60% 30%/50% 50% 46% 55%; position: absolute; top:246px; left: 110px;  z-index: 1;}
+.arm_left:after{content: " "; width: 20px; height: 70px; background: #e0002a; border-radius: 50%; border: 2px solid #000; transform: rotate(-58deg); position: absolute; left: 30px; top: -40px; }
+.footer{width: 90px ;height:80px; background: #fff; border:2px solid #000; border-radius: 60% 60% 50% 60%/60% 40% 60% 60%; transform: rotate(-25deg); position: absolute;; top:260px; left: 60px;}
+.body{width: 100px; height: 50px; background: #00a0e9; border:2px solid #000; border-top:2px solid transparent; border-left: 2px solid transparent; border-radius:50%; position: absolute; top:296px; left: 214px; z-index: 2;}
+.body:after{content: " "; width: 18px ;height: 8px; background: #00a0e9; position: absolute; left: 5px; bottom:4px;}
+.arm_left{width: 180px; height: 80px; background: #00a0e9; border:2px solid #000; border-top:2px solid transparent; border-left:2px solid transparent; border-radius: 50% 50% 38% 60%/50% 50% 40% 50%; transform: rotate(10deg); position: absolute; bottom: 46px; left:240px; z-index: 6;}
+.arm_right{width: 100px; height: 80px; background: #00a0e9; border:2px solid #000; border-radius: 50%; position: absolute; bottom: 65px;right: 100px;
+}
+.hand_left{ width: 76px ;height: 58px; background: #fff; border:2px solid #000; transform: rotate(16deg); border-radius: 50%; position: absolute; bottom: 62px; left: 340px; z-index: 15; }
+.hand_left:after{content: " "; width: 2px ; height: 12px ;background: #000; position: absolute; left:7px; bottom: -3px; transform: rotate(10deg);}
+.hand_right{width: 50px; height: 64px; background: #fff; border:2px solid #000; border-radius: 50%; transform: rotate(50deg); position: absolute; bottom: 98px;right: 88px;}
+.small_bell{width: 45px; height: 45px; background: #ffe43b; border:2px solid #000; border-radius: 50%; position: absolute;; left: 418px; bottom:54px; z-index: 5; overflow: hidden;}
+.small_bell .top_01{width: 60px; height: 50px; border-radius: 0 0 50% 50%/0 0 50% 50%; transform: rotate(-32deg); border:2px solid #000;position: absolute; left: -10px; top:-32px;}
+.small_bell .top_02{width: 60px; height: 50px; border-radius: 0 0 50% 50%/0 0 50% 50%; transform: rotate(-32deg); border:2px solid #000;position: absolute; left: -10px; top:-38px;}
+.small_bell .o{width: 10px; height: 5px; background: #7d6b56; transform: rotate(-10deg); border:2px solid #000; border-radius: 50%; position: absolute; left: 17px; bottom: 10px;}
+.small_bell .line{ width: 13px ;height: 13px; border:2px solid #000; border-radius: 0 20% 30% 0/0 50% 50% 0; border-left: 2px solid transparent; border-top:2px solid transparent; border-bottom: 2px solid transparent; position: absolute; left: 10px; bottom: -3px; }
+.scarf{width: 56px; height: 20px; background: #e0002a; border:2px solid #000; border-radius: 50%; transform: rotate(-20deg); position: absolute; bottom: 92px; left: 428px;}
+</style>
+</head>
+
+<body>
+	<div class="main">
+	<div class="top"></div>
+		<div class="head_wrap">
+            <div class="face">
+                <div class="shelter_left"></div>
+                <div class="row_line"></div>
+                <div class="beard beard_01"></div>
+                <div class="beard beard_02"></div>
+                <div class="beard beard_03"></div>
+            </div>
+            <div class="beard beard_04"></div>
+                <div class="beard beard_05"></div>
+                <div class="beard beard_06"></div>
+            <div class="eye_left">
+                <div class="eyeball"></div>
+            </div>
+            <div class="eye_right">
+                <div class="eyeball"></div>
+            </div>
+            <div class="nose"></div>
+        </div>
+        <div class="ass"></div>
+        <div class="tail"></div>
+        <div class="leg"></div>
+        <div class="footer"></div>
+        <div class="arm_left"></div>
+        <div class="arm_right"></div>
+        <div class="hand_left"></div>
+        <div class="hand_right"></div>
+        <div class="small_bell">
+            <div class="top_01"></div>
+            <div class="top_02"></div>
+            <div class="o"></div>
+            <div class="line"></div>
+        </div>
+        <div class="scarf"></div>
+        <div class="body"></div>
+	</div>
+</body>
+</html>
